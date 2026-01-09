@@ -1,0 +1,20 @@
+[project]
+name = "chinese-models-investigations"
+version = "0.1.0"
+description = "Investigation experiments testing how Chinese language models handle sensitive topics"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Arya Jakkli"}
+]
+dependencies = [
+    "seer @ git+https://github.com/ajobi-uhc/seer.git",
+    "pyyaml>=6.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []  # No Python modules to install, just dependencies
