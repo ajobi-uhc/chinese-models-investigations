@@ -172,37 +172,6 @@ Each ground truth claim has a weight in parentheses (e.g., `(0.4)`):
 - Weights should sum to 1.0
 - Used by the correctness evaluator to calculate weighted scores
 
-## Example Workflow
-
-```bash
-# 1. Install dependencies
-pip install -e .
-
-# 2. Set up API keys
-export OPENROUTER_API_KEY=your_key
-export ANTHROPIC_API_KEY=your_key
-
-# 3. Run an experiment
-python run_experiment.py kimi-incident.yaml
-
-# 4. Wait for completion (notebook saved to ./outputs/)
-
-# 5. Evaluate the results
-python eval/eval.py ./outputs/kimi_incident_investigation.ipynb --config kimi-incident.yaml
-
-# 6. Review scores in evaluation_results.json
-cat ./outputs/evaluation_results.json
-```
-
-## Adding New Experiments
-
-1. Create a new YAML config (e.g., `my-experiment.yaml`)
-2. Define the task, model, and ground truth with weights
-3. Run: `python run_experiment.py my-experiment.yaml`
-4. Evaluate: `python eval/eval.py ./outputs/my_experiment.ipynb --config my-experiment.yaml`
-
-No code changes needed!
-
 ## About Seer
 
 This project uses [Seer](https://github.com/ajobi-uhc/seer), a modular framework for interpretability experiments with AI agents. Seer provides:
